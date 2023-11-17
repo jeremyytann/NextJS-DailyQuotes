@@ -1,6 +1,10 @@
 import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
+  created_at: {
+    type: String,
+    required: [true, 'Datetime is required.']
+  },
   email: {
     type: String,
     unique: [true, 'Email already exists!'],

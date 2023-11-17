@@ -35,7 +35,8 @@ const handler = NextAuth({
           await User.create({
             email: profile.email,
             username: profile.email,
-            image: profile.picture
+            image: profile.picture,
+            created_at: new Date().toISOString(),
           })
         }
         
